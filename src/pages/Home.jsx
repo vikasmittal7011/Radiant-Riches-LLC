@@ -1,3 +1,4 @@
+import Footer from "../components/Footer"
 import Login from "../components/Login"
 import MainSection from "../components/MainSection"
 import NavBar from "../components/NavBar"
@@ -12,6 +13,7 @@ const Home = () => {
             <TopItemsCard />
             <RelatedItems />
             <Login />
+            <Footer />
         </>
     )
 }

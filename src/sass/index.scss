@@ -91,7 +91,7 @@
 
 .top-section {
   padding: $main-padding;
-  margin-top: 30px;
+  margin-top: $margin-top2;
 
   & h1 {
     font-size: 48px;
@@ -371,7 +371,7 @@
 
 .login {
   padding: $main-padding;
-  margin-top: 30px;
+  margin-top: $margin-top2;
   flex-wrap: wrap;
   @include flexing(space-between);
 
@@ -404,6 +404,42 @@
   }
 }
 
+.footer {
+  margin-top: $margin-top2;
+  padding: 60px 200px;
+  background: $bg-color;
+  color: $text-color;
+  @include flexing(space-between);
+
+  & .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    & h2 {
+      font-weight: 400;
+      font-size: $font-size5;
+    }
+    & p {
+      color: $text-color10;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      font-size: $font-size;
+
+      & .icon {
+        @include icons;
+      }
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .nav_bar {
     padding: 0;
@@ -423,6 +459,9 @@
   }
   .login {
     padding: $padding;
+  }
+  .footer {
+    padding: 60px 20px;
   }
 }
 
@@ -529,6 +568,16 @@
       font-size: 24px;
     }
     & div {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    align-items: start;
+    flex-direction: column;
+    row-gap: 50px;
+
+    & .links {
       width: 100%;
     }
   }
