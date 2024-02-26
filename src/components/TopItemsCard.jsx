@@ -27,7 +27,7 @@ const TopItemsCard = () => {
                                 const length = item.highlights.length
                                 return length === 1 ?
                                     <p key={i}>{hi.text}</p> :
-                                    <div>
+                                    <div key={i}>
                                         <span>{hi.number}</span> {hi.text}
                                     </div>
                             })}
@@ -36,9 +36,9 @@ const TopItemsCard = () => {
                         <div className="loving">
                             <p className="heading">Why we love it</p>
                             {item?.loving?.map((lo, i) => (
-                                <div>
+                                <div key={i}>
                                     <CheckIcon className="icons" />
-                                    <p key={i}>{lo.text}</p>
+                                    <p>{lo.text}</p>
                                 </div>
                             ))}
                         </div>

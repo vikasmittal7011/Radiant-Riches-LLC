@@ -1,7 +1,6 @@
 import { item } from "../utils/constant"
 
 const RelatedItems = () => {
-    console.log(item.image)
     return (
         <>
             <p className="related-items-heading">Related deals you might like for</p>

@@ -138,12 +138,16 @@
     @include flexing(left);
     gap: 20px;
     margin-top: 10px;
-    & .icons {
-      @include icons();
-    }
-    & p {
-      font-size: $font-size;
-      color: $text-color3;
+    & div {
+      @include flexing(left);
+      gap: $gap;
+      & .icons {
+        @include icons();
+      }
+      & p {
+        font-size: $font-size;
+        color: $text-color3;
+      }
     }
   }
 }

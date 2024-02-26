@@ -26,17 +26,17 @@ const MainSection = () => {
             </div>
 
             <div className="second-section">
-                {options.map((o) => (
-                    <p>{o}</p>
+                {options.map((o, i) => (
+                    <p key={i}>{o}</p>
                 ))}
             </div>
 
             <div className="third-section">
                 {pathing.map((p, i) => (
-                    <>
+                    <div key={i}>
                         <p>{p}</p>
                         {pathing.length - 1 !== i && <ChevronRightIcon className="icons" />}
-                    </>
+                    </div>
                 ))}
             </div>
 
