@@ -8,3 +8,8 @@
   width: 37px;
   height: 37px;
 }
+
+@mixin align-direction {
+  align-items: start;
+  flex-direction: column;
+}
