@@ -9,6 +9,11 @@
   height: 37px;
 }
 
+@mixin icons {
+  width: 16px;
+  height: 16px;
+}
+
 @mixin align-direction {
   align-items: start;
   flex-direction: column;
