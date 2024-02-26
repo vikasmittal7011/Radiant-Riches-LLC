@@ -94,7 +94,6 @@
   margin-top: 30px;
 
   & h1 {
-    font-weight: $font-weight;
     font-size: 48px;
     color: #2c384a;
   }
@@ -157,10 +156,10 @@
 
   & .card {
     @include flexing(space-between);
-    padding: 0 20px;
+    padding: $padding;
     height: $height;
     gap: $gap;
-    margin-top: 100px;
+    margin-top: $margin-top;
 
     & .left {
       position: relative;
@@ -168,8 +167,7 @@
       flex-direction: column;
 
       & img {
-        width: 141px;
-        height: 103px;
+        @include img;
       }
 
       & p {
@@ -188,7 +186,7 @@
 
         & p {
           @include flexing(start);
-          font-size: 16px;
+          font-size: $font-size5;
           color: $text-color;
 
           & .icons {
@@ -203,7 +201,7 @@
         position: absolute;
         top: -20px;
         left: -30px;
-        font-size: 20px;
+        font-size: $font-size4;
         color: $text-color4;
       }
     }
@@ -214,7 +212,7 @@
 
       & p {
         & span {
-          font-weight: 700;
+          font-weight: $font-weight;
         }
       }
 
@@ -231,7 +229,7 @@
       & div {
         color: $text-color1;
         width: 483px;
-        font-size: 16px;
+        font-size: $font-size5;
         margin: 5px 0 5px 18px;
 
         & div {
@@ -243,7 +241,7 @@
             padding: 2px 5px;
             border-radius: 4px;
             color: $text-color6;
-            font-size: 16px;
+            font-size: $font-size5;
             margin-right: 5px;
           }
         }
@@ -285,7 +283,7 @@
         text-align: center;
         color: #074786;
         & .rating {
-          font-size: 32px;
+          font-size: $font-size6;
         }
         & .text {
           margin-top: 5px;
@@ -299,15 +297,76 @@
       }
 
       & button {
-        background: $text-color6;
-        color: $text-color;
-        font-size: 16px;
-        border-radius: 12px;
-        border: 0;
-        padding: 10px 0;
+        @include button;
       }
     }
   }
+}
+
+.related-items {
+  padding: $main-padding;
+  margin-top: $margin-top;
+  @include flexing(space-between);
+  text-align: center;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  gap: 20px;
+
+  & div {
+    & img {
+      @include img;
+    }
+
+    & div {
+      color: $text-color7;
+      font-size: $font-size3;
+      margin: $margin;
+      gap: $gap;
+      @include flexing(start);
+    }
+
+    & h4 {
+      font-weight: $font-weight;
+      margin: $margin;
+      color: $text-color4;
+      font-size: $font-size5;
+    }
+
+    & .text {
+      text-align: start;
+      margin: $margin;
+      color: $text-color4;
+      font-size: $font-size5;
+      width: 284px;
+    }
+
+    & .price {
+      & p {
+        font-size: $font-size4;
+        color: $text-color2;
+        & span {
+          font-size: $font-size3;
+          color: $text-color9;
+          & span {
+            font-size: $font-size;
+            color: $text-color8;
+          }
+        }
+      }
+    }
+
+    & button {
+      @include button;
+      width: 100%;
+    }
+  }
+}
+
+.related-items-heading {
+  padding: $main-padding;
+  margin: 70px 0 -50px 0;
+  font-size: $font-size6;
+  color: $text-color5;
 }
 
 @media (max-width: 1024px) {
@@ -315,10 +374,17 @@
     padding: 0;
   }
   .top-section {
-    padding: 0 20px;
+    padding: $padding;
   }
   .top-card-item {
-    padding: 0 20px;
+    padding: $padding;
+  }
+  .related-items {
+    justify-content: center;
+    padding: $padding;
+  }
+  .related-items-heading {
+    padding: $padding;
   }
 }
 
@@ -385,6 +451,10 @@
     }
   }
 
+  .related-items-heading {
+    margin-top: 50px;
+  }
+
   .top-card-item {
     & .card {
       margin-top: 50px;
@@ -433,6 +503,11 @@
         & .main2 {
           top: 30px;
           left: -106px;
+        }
+      }
+      & .middle {
+        & div {
+          width: 260px;
         }
       }
     }
