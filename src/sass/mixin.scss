@@ -1,0 +1,10 @@
+@mixin flexing($jc) {
+  display: flex;
+  justify-content: $jc;
+  align-items: center;
+}
+
+@mixin width-height {
+  width: 37px;
+  height: 37px;
+}
