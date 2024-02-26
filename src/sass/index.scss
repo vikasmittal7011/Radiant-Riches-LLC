@@ -369,6 +369,41 @@
   color: $text-color5;
 }
 
+.login {
+  padding: $main-padding;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  @include flexing(space-between);
+
+  & p {
+    width: 398px;
+    font-size: $font-size6;
+    color: $text-color2;
+  }
+
+  & div {
+    @include flexing(start);
+
+    & input {
+      width: 348px;
+      height: 52px;
+      border: $text-color6;
+      font-size: $font-size4;
+      padding-left: 5px;
+    }
+
+    & button {
+      width: 97px;
+      height: 52px;
+      background: $text-color6;
+      border: 0;
+      color: $text-color;
+      cursor: pointer;
+      border-radius: 0px 12px 12px 0px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .nav_bar {
     padding: 0;
@@ -384,6 +419,9 @@
     padding: $padding;
   }
   .related-items-heading {
+    padding: $padding;
+  }
+  .login {
     padding: $padding;
   }
 }
@@ -407,6 +445,13 @@
           width: 300px;
         }
       }
+    }
+  }
+
+  .login {
+    & p {
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 }
@@ -478,6 +523,15 @@
       }
     }
   }
+
+  .login {
+    & p {
+      font-size: 24px;
+    }
+    & div {
+      width: 100%;
+    }
+  }
 }
 
 @media (max-width: 375px) {
@@ -545,6 +599,20 @@
         & .bg {
           padding: 2px 0;
         }
+      }
+    }
+  }
+
+  .login {
+    & p {
+      font-size: $font-size4;
+    }
+
+    & div {
+      @include flexing(start);
+
+      & input {
+        width: 200px;
       }
     }
   }

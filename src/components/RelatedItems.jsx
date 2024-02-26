@@ -23,7 +23,8 @@ const RelatedItems = () => {
 
                     </div>
                 ))}
-            </div>s</>
+            </div>
+        </>
     )
 }
 

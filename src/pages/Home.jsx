@@ -1,3 +1,4 @@
+import Login from "../components/Login"
 import MainSection from "../components/MainSection"
 import NavBar from "../components/NavBar"
 import RelatedItems from "../components/RelatedItems"
@@ -10,6 +11,7 @@ const Home = () => {
             <MainSection />
             <TopItemsCard />
             <RelatedItems />
+            <Login />
         </>
     )
 }
